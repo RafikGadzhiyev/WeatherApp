@@ -1,0 +1,185 @@
+.content_container {
+	min-height: 100vh;
+	height: auto;
+	background: linear-gradient(to right, #24243E, #302B63, #110E2D);
+	color: white;
+}
+
+.header_container {
+	padding: 20px 15px 5px;
+}
+
+.header_title {
+	font-size: 1.4rem;
+	font-weight: thin;
+	text-transform: capitalize;
+}
+
+.main_container {
+	width: 100%;
+}
+
+.main_wrapper {
+	margin: 0 auto;
+	min-width: 1000px;
+	width: fit-content;
+}
+
+.main_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main_form_input {
+	width: 100%;
+	border-radius: 2.5px;
+	border: 1px solid white;
+	outline: none;
+	height: 30px;
+	text-indent: 10px;
+	text-transform: capitalize;
+	font-size: .7rem;
+	padding-block: 15px;
+}
+
+.main_form_button {
+	width: 40px;
+	height: 30px;
+	border-radius: 0 2.5px 2.5px 0;
+	border: none;
+	outline: none;
+	background-color: #474196;
+	color: white;
+	padding-block: 1.5px;
+	box-sizing: content-box;
+}
+
+.main_form_cities_list {
+	list-style: none;
+	padding: 0px 10px;
+	background-color: rgba(255, 255, 255, 0.24);
+	width: 100%;
+}
+
+.main_form_city {
+	width: 100%;
+}
+
+.main_form_city:not(:last-of-type) {
+	border-block: 1px solid gray;
+}
+
+.main_form_city_button {
+	width: 100%;
+	padding-block: 20px;
+	box-sizing: content-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: inherit;
+	transition: 300ms ease;
+}
+
+.main_form_city_button:hover {
+	background-color: rgba(255, 255, 255, 0.355)
+}
+
+.today_weather_container {
+	width: 100%;
+	height: 500px;
+	/* background-color: #555377; */
+	background-color: rgba(255, 255, 255, 0.16);
+	margin-block: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.today_weather_country {
+	font-size: 2.6rem;
+	text-transform: capitalize;
+}
+
+.today_weather_temperature {
+	font-size: 2.4rem;
+}
+
+.today_weather_icon {
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+.today_weather_description {
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+.today_weather_date {
+	margin-block: 20px;
+	font-size: 1.6rem;
+	letter-spacing: 3px;
+	font-weight: 100;
+}
+
+.today_weather_information {
+	display: flex;
+	height: 55px;
+	gap: 5px 20px;
+}
+
+.today_weather_information_text {
+	font-size: .8rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.days_list {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	gap: 20px;
+}
+
+.current_day {
+	/* width: 200px; */
+	background-color: rgba(255, 255, 255, 0.16);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 60px;
+	border-radius: 2.5px;
+	gap: 20px;
+
+}
+
+.current_day_title {}
+
+.current_day_icon {
+	font-size: 4rem;
+}
+
+.current_day_temperature_container {}
+
+.current_day_max_temperature {
+	margin-right: 5px;
+	font-size: 1rem;
+}
+
+.current_day_min_temperature {
+	font-size: .8rem;
+}
+
+.current_day_weather_description {}
+
+.disabled {
+	background-color: #343A40;
+	color: white;
+	cursor: not-allowed;
+}
