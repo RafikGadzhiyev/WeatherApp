@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import MainContext from '../../context/Main.contex';
 import styles from './../../../styles/main/main.module.css'
 
 export default function SearchForm(props) {
     const [cities, setCities] = useState([]);
+    const state = useContext(MainContext);
 
     useEffect(() => {
         setCities(() => getCitiesAfterFiltering());
-    }, [props.cities])
+    }, [state.cities])
 
     function getCitiesAfterFiltering() {
-        if (props.cities) {
+        if (state.cities) {
             let result = [],
                 locations = [];
 
-            props.cities.map((e, i) => {
+            state.cities.map((e, i) => {
                 if (!locations.includes('' + e.lat + e.lon)) {
                     result.push({
                         name: e.name,
@@ -56,8 +58,8 @@ export default function SearchForm(props) {
                         type='button'
                         className={styles.main_form_city_button}
                         onClick={() => {
-                            props.setCityLocation(() => e.location);
-                            setCities(() => [])
+                            state.setCityLocation(() => e.location);
+                            setCities(() => []);
                         }}
                     >
                             {e.name}, {e.country}
